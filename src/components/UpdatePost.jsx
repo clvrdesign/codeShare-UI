@@ -24,7 +24,7 @@ const UpdatePost = ({ closeModal }) => {
   useEffect(() => {
    
     // Fetch post data to update
-    axios.get(`http://localhost:4000/posts/${id}`)
+    axios.get(`http://localhost:4000/${id}`)
       .then((response) => {
         setFormData({
           title: response.data.title || "",
@@ -85,7 +85,7 @@ const UpdatePost = ({ closeModal }) => {
     setSubmitError(null);
 
     // Update the existing post
-    axios.patch(`http://localhost:4000/posts/${id}`, formData)
+    axios.patch(`http://localhost:4000/${id}`, formData)
       .then(() => {
         alert('Post updated successfully!');
         setValidationErrors({});

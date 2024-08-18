@@ -22,7 +22,7 @@ const AllPosts = () => {
         const fetchPosts = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:4000/posts?search=${searchQuery}`);
+                const response = await axios.get(`http://localhost:4000/?search=${searchQuery}`);
                 setPostsData(response.data);
             } catch (error) {
                 setError(error.message);
@@ -36,7 +36,7 @@ const AllPosts = () => {
 
     const deletePost = async () => {
         try {
-            await axios.delete(`http://localhost:4000/posts/${selectedPost._id}`);
+            await axios.delete(`http://localhost:4000/${selectedPost._id}`);
             setPostsData(postsData.filter(post => post._id !== selectedPost._id));
             handleCloseModal();
         } catch (error) {

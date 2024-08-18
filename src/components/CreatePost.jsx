@@ -58,7 +58,7 @@ const CreatePage = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    axios.post('http://localhost:4000/posts/', formData)
+    axios.post('http://localhost:4000/', formData)
       .then(() => {
         alert("Post created successfully!");
         setFormData({
