@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 
 const Footer = () => {
     const [year, setYear] = useState(new Date().getFullYear());
