@@ -9,7 +9,7 @@ const Posts = ({ onPostClick }) => {
   const [error, setError] = useState(null); // Error state
 
     useEffect(() => {
-        axios.get('http://localhost:4000/')
+        axios.get('https://code-share-server-phi.vercel.app/')
           .then((response) => {
             setPosts(response.data);
             setLoading(false);

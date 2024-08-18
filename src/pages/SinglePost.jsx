@@ -19,7 +19,7 @@ const SinglePost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/${id}`);
+                const response = await axios.get(`https://code-share-server-phi.vercel.app/${id}`);
                 setPost(response.data);
             } catch (error) {
                 setError(error.message);
@@ -34,7 +34,7 @@ const SinglePost = () => {
 
     const deletePost = async () => {
         try {
-            const res = await axios.delete(`http://localhost:4000/${id}`);
+            const res = await axios.delete(`https://code-share-server-phi.vercel.app/${id}`);
             // Redirect or update UI after deletion
             if(res){
                 navigate('/posts')

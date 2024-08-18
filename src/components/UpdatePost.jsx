@@ -24,7 +24,7 @@ const UpdatePost = ({ closeModal }) => {
   useEffect(() => {
    
     // Fetch post data to update
-    axios.get(`http://localhost:4000/${id}`)
+    axios.get(`https://code-share-server-phi.vercel.app//${id}`)
       .then((response) => {
         setFormData({
           title: response.data.title || "",
@@ -85,7 +85,7 @@ const UpdatePost = ({ closeModal }) => {
     setSubmitError(null);
 
     // Update the existing post
-    axios.patch(`http://localhost:4000/${id}`, formData)
+    axios.patch(`https://code-share-server-phi.vercel.app/${id}`, formData)
       .then(() => {
         alert('Post updated successfully!');
         setValidationErrors({});
