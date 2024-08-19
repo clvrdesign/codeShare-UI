@@ -24,7 +24,7 @@ const UpdatePost = ({ closeModal }) => {
   useEffect(() => {
    
     // Fetch post data to update
-    axios.get(`https://code-share-server-phi.vercel.app//${id}`)
+    axios.get(`https://code-share-server-phi.vercel.app/${id}`)
       .then((response) => {
         setFormData({
           title: response.data.title || "",
@@ -120,7 +120,7 @@ const UpdatePost = ({ closeModal }) => {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-[325px]">
       <h1 className="text-3xl text-center text-gray-300 font-bold mt-10">
         Update Post
       </h1>
